@@ -1,0 +1,32 @@
+.panel_collapsible{
+	border: solid 1px #0066CC;
+	width:200px;
+	border-radius:5px;
+	-moz-border-radius:25px;
+}
+.panel_collapsible .title{
+    cursor:pointer;
+}
+.panel_collapsible .title div{
+    padding:5px;
+    padding-left:10px;
+    background-color:#0066CC;
+    color:#FFFFFF;
+    font-family: Arial;
+    font-size:11pt;
+}
+.panel_collapsible .content{
+	max-height:400px;
+	overflow-y:scroll;
+	display:block;
+	background-color: #FFFFFF;
+	padding: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.panel_collapsible .content ul{
+	list-style-type:none;
+	padding-left:20px;
+	font-family: Arial;
+    font-size:9pt;
+}

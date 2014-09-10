@@ -1,0 +1,48 @@
+.view_tree{
+	cursor:pointer;
+	margin-left:-15px;
+}
+.view_tree .branch{
+	clear:both;
+}
+.view_tree .branch ul{
+	display:block;
+	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
+}
+.view_tree .branch .toggle_expanded{
+	width: 15px;
+	height: 15px;
+	background-image: url('images/Minus.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+	float:left;
+}
+.view_tree .branch .toggle_collapsed{
+	width: 15px;
+	height: 15px;
+	background-image: url('images/Plus.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+	float:left;
+}
+.view_tree .branch .icon{}
+.view_tree .branch .comment{}
+.view_tree .leaf{
+	padding-left:15px; /*must match width of .toggle_expanded & .toggle_collapsed*/
+}
+.view_tree .leaf .icon{}
+.view_tree .leaf .comment{}
+/*.view_tree ul{
+	list-style-type:none;
+	padding-left:20px;
+	font-family: Arial;
+    font-size:9pt;
+}
+.view_tree li{
+	list-style-type:none;
+	padding-left:20px;
+	font-family: Arial;
+    font-size:9pt;
+}*/

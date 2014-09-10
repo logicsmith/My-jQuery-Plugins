@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My jQuery Plugins Demo</title>
+	<!--JQuery-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<!--JQuery UI-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	<!--Collaspable Panel-->
+	<link rel="stylesheet" type="text/css" href="panel_collaspable.css" />
+	<script type="text/javascript" src="panel_collaspable.js"></script>
+	<!--Treeview-->
+	<link rel="stylesheet" type="text/css" href="view_tree.css" />
+	<script type="text/javascript" src="view_tree.js"></script>
+	<!--Document-->
+	<script language="javascript" type="text/javascript">
+		$(document).ready(function() {
+			$(".panel_collapsible").panel_collapsible();
+			$("#myTree").view_tree();
+			var myTree = $("#myTree").data('view_tree');
+			$("#ca").button().click(function(event){
+				event.preventDefault();
+				myTree.collapseAll();
+			});
+			$("#ea").button().click(function(event){
+				event.preventDefault();
+				myTree.expandAll();
+			});
+			$("#st").button().click(function(event){
+				event.preventDefault();
+				console.log(myTree.serialize());
+			});
+		});
+	</script>
+	</head>
+<body>
+<div style="padding:10px;">
+	<div class="panel_collapsible" title="Library">
+		<button style="font-size:8pt;" id="ca">Collapse</button>
+		<button style="font-size:8pt;" id="ea">Expand</button>
+		<button style="font-size:8pt;" id="st">Save</button>
+		<ul id="myTree" class="view_tree" tooltip="PHP Language">
+			<li>Node 1</li>
+			<li>Node 2</li>
+			<li>Branch
+				<ul>
+					<li>#  Single Line</li>
+					<li>// Single Line</li>
+					<li>/* Muti Line */</li>
+				</ul>
+			</li>
+			<li>Node 3</li>
+			<li expanded="true">
+				Comments
+				<ul>
+					<li>#  Single Line</li>
+					<li>// Single Line</li>
+					<li>/* Muti Line */
+						<ul>
+							<li>#  Single Line</li>
+							<li>// Single Line</li>
+							<li>/* Muti Line */</li>
+						</ul>
+					</li>
+					<li>abc
+						<ul>
+							<li>#  Single Line</li>
+							<li>// Single Line</li>
+							<li>/* Muti Line */</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
