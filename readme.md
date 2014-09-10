@@ -1,5 +1,8 @@
 #Some jQuery Plugins I have developed
 
+Collapsible Panel
+Focusing Tree View
+
 * [See Demo][1]
 
 ##Use Example
